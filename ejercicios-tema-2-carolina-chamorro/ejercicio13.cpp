@@ -292,7 +292,7 @@ int ejercicio14() {
 
 int ejercicio15() {
     
-    double p1, p2, p3, p4, ef, el, hp, ap, pt;
+    double p1, p2, p3, p4, ef, el, hp, ap;
     cout << "Nota práctica 1: ";
     cin >> p1;
     cout << "Nota práctica 2: ";
@@ -310,12 +310,12 @@ int ejercicio15() {
     cout << "Asistencia y participación: ";
     cin >> ap;
     
-    pt = 4;
-    if (p1 < 5 && p2 < 5 && p3 < 5 && p4 < 5) {
-        pt = (((p1 + p2 + p3 + p4) / 4) * 0.20);
+
+    if (p1 > 5 && p2 > 5 && p3 > 5 && p4 > 5 && ef >= 4) {
+        cout << "Nota final: " << (((el + hp + ap)/3 * 0.15) + (ef * 0.65) + ((p1 + p2 + p3 + p4) / 4) * 0.20);
     }
     
-    cout << "Nota final: " << (((el + hp + ap)/3 * 0.15) + (ef * 0.65) + pt);
+    cout << "Estás suspenso" << endl;
     
     return 0;
 }
